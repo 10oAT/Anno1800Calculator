@@ -125,6 +125,12 @@
                             <div class="input text">
                                 <div class="input-group spinner mb-3">
                                     <input step="10" class="form-control input-lg" type="number" value="0" data-bind="value: amount, attr: {title: 'Press '+name()[0]+' to focus' }" />
+                                    <div class="input-group-append">
+                                        <div class="input-group-btn-vertical">
+                                            <button class="btn btn-default" type="button" data-bind="click: amount(parseInt(amount()) + 10)"><i class="fa fa-caret-up"></i></button>
+                                            <button class="btn btn-default" type="button" data-bind="click: amount(parseInt(amount()) - 10), enable: amount() > 0"><i class="fa fa-caret-down"></i></button>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
 
